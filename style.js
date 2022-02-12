@@ -27,7 +27,6 @@ fetch(url)
     .then(shopProduct => {
         shopProduct.forEach(({ id, title, price, image, rating}) => {
         
-            
             htmlCatalog += `
             <li class = "main__product__card">
             <img class = "product__img" src= "${image}"/>

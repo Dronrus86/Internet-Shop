@@ -242,3 +242,12 @@ body {
     font-size: 16px;
     padding-top: 2rem;
 }
+
+
+
+.sale{
+    width: 50px;
+    position: absolute;
+    padding-left: 130px;
+    padding-top: 20px;
+}

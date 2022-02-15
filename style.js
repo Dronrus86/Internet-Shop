@@ -27,6 +27,15 @@ fetch(url)
     .then(shopProduct => {
         shopProduct.forEach(({ id, title, price, image, rating}) => {
         
+
+            // function sale() {
+            //     if(price = 300){
+            //    return innerHTML = "<img src ='img/sale.png'/>"
+            //     }
+            // }
+           
+           
+
             function ratingStar() {
                 if (rating.rate <= 3) {
                     return innerHTML = '&#11088;&#11088;'
@@ -34,7 +43,7 @@ fetch(url)
                     return innerHTML = '&#11088;&#11088;&#11088;'
  
                 } else if (rating.rate >= 4 && rating.rate < 5) {
-                    return innerHTML = '&#11088;&#11088;&#11088;&#11088;'
+                    return innerHTML = '&#11088;&#11088;&#11088;&#11088;&#11088;'
                 }
             }
  

@@ -27,13 +27,29 @@ fetch(url)
     .then(shopProduct => {
         shopProduct.forEach(({ id, title, price, image, rating}) => {
         
+            function ratingStar() {
+                if (rating.rate <= 3) {
+                    return innerHTML = '&#11088;&#11088;'
+                } else if (rating.rate >= 3 && rating.rate < 4) {
+                    return innerHTML = '&#11088;&#11088;&#11088;'
+ 
+                } else if (rating.rate >= 4 && rating.rate < 5) {
+                    return innerHTML = '&#11088;&#11088;&#11088;&#11088;'
+                }
+            }
+ 
             htmlCatalog += `
             <li class = "main__product__card">
             <img class = "product__img" src= "${image}"/>
             <p class = "product__title">${title}</p>
-            <p><img src = "img/star.png"/>${rating.rate}</p>
-            <p class = "product__price">${price} $</p>
+           <p>${ratingStar()}</p>
+            <p class = "product__price">${price.toLocaleString('en-US',
+                {
+                    style: 'currency',
+                    currency: 'USD'
+                })}</p>
             <button class = "product__add">${addCart}</button>
+            </li>
             </li>
             `;
 

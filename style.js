@@ -25,14 +25,15 @@ const url = 'https://fakestoreapi.com/products'
 fetch(url)
     .then(response => response.json())
     .then(shopProduct => {
-        shopProduct.forEach(({ id, title, price, image, rating}) => {
-        
-
-            // function sale() {
-            //     if(price = 300){
-            //    return innerHTML = "<img src ='img/sale.png'/>"
-            //     }
-            // }
+        shopProduct.forEach(({id, title, price, image, rating}) => {
+         
+            function sale() {
+                if(id =='1' || id =='3' || id == '6'){
+               return innerHTML = "<img class = 'sale' src ='img/sale.png'/>"
+                }else{
+                    return innerHTML = "";
+                }
+            }
            
            
 
@@ -49,6 +50,7 @@ fetch(url)
  
             htmlCatalog += `
             <li class = "main__product__card">
+            ${sale()}
             <img class = "product__img" src= "${image}"/>
             <p class = "product__title">${title}</p>
            <p>${ratingStar()}</p>

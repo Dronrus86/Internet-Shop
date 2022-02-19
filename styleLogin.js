@@ -29,3 +29,11 @@ function clearInput() {
     });
 
 }
+
+
+
+const loginBtn = document.querySelector('.login__btn')
+const loginForm = document.querySelector('.login__form')
+loginBtn.addEventListener('mousedown', () => {
+    loginForm.classList.toggle('show__login');
+})

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/online-shopping.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleLogin.css">
     <title>Internet-Shop</title>
 </head>
 
@@ -38,18 +39,56 @@
             </ul>
             <div class="nav__login">
                 <ul>
-                    <li class="nav__item"> <a href=""><img src="img/login.png" alt="img__login"></a></li>
-                    <li class="nav__item blok"><a href="login.html">LogIn</a></li>
+                    <li class="nav__item"> <a href="#"><img src="img/login.png" alt="img__login"></a></li>
+                    <li class="nav__item blok  login__btn"><a href="#">LogIn</a></li>
                 </ul>
                 <div class="loginFullname">
                     <p class="fullName"></p>
                 </div>
-            </div>
 
+                <!--login-->
+                
+                <div class="login__form show__login">
+                    <div class="login__form__header">
+
+                    </div>
+                    <div>
+                        <h1>Войти</h1>
+                        <a href="registration.html">Регистрация</a>
+                    </div>
+                    <div class="login__title">
+                        <div>
+                            <p>Login:</p>
+                            <label for="">
+                                <input class="login__input login" type="text" required>
+                            </label>
+                        </div>
+
+                        <div>
+                            <p>Password:</p>
+                            <label for="">
+                                <input class="login__input password" type="password" required>
+                            </label>
+                        </div>
+                        <div>
+                            <button class="login__add btn">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Login-->
+
+            <!--Cart-->
             <div class="header__nav__cart">
                 <button class="cart__add"><img src="img/free-icon-shopping-cart-483283.png" alt="cart"> Cart <span
                         class="cart__add__product cart__count">0</span></button>
+
+                <div class="cart show__cart">
+
+                </div>
             </div>
+            <!--Cart-->
+
         </div>
     </nav>
 
@@ -86,6 +125,7 @@
         </div>
     </footer>
 </div>
+<script src="styleLogin.js"></script>
 <script src="style.js"></script>
 </body>
 
